@@ -24,7 +24,7 @@ public class BookMatcher {
 			@Override
 			public void describeMismatchSafely(final Book book,
 					final Description mismatchDescription) {
-				mismatchDescription.appendText(" but was ").appendValue(
+				mismatchDescription.appendText("was ").appendValue(
 						book.getIsbn());
 			}
 
@@ -43,6 +43,13 @@ public class BookMatcher {
 			@Override
 			protected boolean matchesSafely(final Book book) {
 				return id == book.getId();
+			}
+
+			@Override
+			public void describeMismatchSafely(final Book book,
+					final Description mismatchDescription) {
+				mismatchDescription.appendText("was ")
+						.appendValue(book.getId());
 			}
 		};
 	}

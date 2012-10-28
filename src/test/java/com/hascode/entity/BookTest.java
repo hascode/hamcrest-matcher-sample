@@ -2,7 +2,7 @@ package com.hascode.entity;
 
 import static com.hascode.matcher.BookMatcher.hasId;
 import static com.hascode.matcher.BookMatcher.hasIsbn;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Test;
 
